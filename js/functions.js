@@ -1,15 +1,21 @@
 var arvotut = 0
-const jokerit = []
-const getRandomIntNumerInRange = (min, max) => {
-    return (Math.floor(Math.random() * max)) + min;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    let table_n = document.querySelector('table');
+    let luonappi = document.querySelector('button');
 
-document.querySelector('button').addEventListener('click',() => {
-    for (let i = 7; i>=0;i--) {
-        const randomized_number = getRandomIntNumerInRange(1,9)
-        document.querySelector("table").innerHTML = randomized_number
+    luonappi.addEventListener('click', generateJokerRow);
+
+    function generateJokerRow() {
+        let uusiRivi = document.createElement('tr');
+        for (let i = 0; i < 7; i++) {
+            let randomized_number = Math.floor(Math.random() * 10);
+            let celli = document.createElement('td');
+            celli.textContent = randomized_number;
+            uusiRivi.appendChild(celli);
+        }
+        table_n.appendChild(uusiRivi);
+        arvotut++;
+    document.querySelector("p").innerHTML = "Valmiita rivejä: " + arvotut;
     }
-    
-    arvotut++
-    document.querySelector("p").innerHTML = "Valmiita rivejä: " + arvotut
+
 })

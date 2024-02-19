@@ -1,0 +1,36 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-shadow: 1px 1px 1px rgb(206, 206, 206);
+}
+
+#rivit {
+    border-spacing: 12px;
+}
+
+#rivit td {
+    border-radius: 1000px;
+    border: 1px solid black;
+    padding: 4px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(255, 237, 209);
+    box-shadow: 2px 2px 2px black;
+}
+
+ button {
+    background-color: rgb(228, 222, 252);
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 8px;
+ }
+
+ button:hover {
+    background-color: rgb(190, 174, 255);
+    box-shadow: 1px 1px 5px black;
+    cursor: pointer;
+    transition-duration: 100ms;
+    
+ }
